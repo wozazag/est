@@ -1,26 +1,27 @@
 import React, { Component } from "react";
-import 
-
+import Customer from "./Customer";
 import "./styles.css";
+
+const customer = {
+  id: 1,
+  image: "https://placeimg.com/64/64/any",
+  name: "홍길동",
+  birthday: "961222",
+  gender: "남자",
+  job: "대학생"
+};
 
 class App extends Component {
   render() {
     return (
-      <div className="App">
-        <header className="App-log">
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="http://reactjs.org"
-            target="_blank"
-            rel="dddddd"
-          >
-            Learn React
-          </a>
-        </header>
-      </div>
+      <Customer
+        id={customer.id}
+        image={customer.image}
+        name={customer.name}
+        birthday={customer.birthday}
+        gender={customer.gender}
+        job={customer.job}
+      />
     );
   }
 }
